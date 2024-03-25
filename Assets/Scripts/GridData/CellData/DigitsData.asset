@@ -12,4 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f18b919a103634792b72b9559f9ef5, type: 3}
   m_Name: DigitsData
   m_EditorClassIdentifier: 
-  cells: []
+  cells:
+  - m_Name: 1
+    m_Sprite: {fileID: 1422184923334757970, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 2
+    m_Sprite: {fileID: 1808195818850983521, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 3
+    m_Sprite: {fileID: -7900951133411543555, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 4
+    m_Sprite: {fileID: 2267071060405275165, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 5
+    m_Sprite: {fileID: -7398325283844340781, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 6
+    m_Sprite: {fileID: -7015292045520539579, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: 7
+    m_Sprite: {fileID: -675344402919758444, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 90
+  - m_Name: 8
+    m_Sprite: {fileID: 3547489320769246608, guid: 92f7834bd765a7841a4373e05f233cee, type: 3}
+    m_CompensationAngle: 90
+  - m_Name: 9
+    m_Sprite: {fileID: -1155199509967091035, guid: 61daba8bdcef42a44a39073f156e9b5d, type: 3}
+    m_CompensationAngle: 0

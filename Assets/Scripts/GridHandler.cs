@@ -11,12 +11,17 @@ namespace GridManagement
         [SerializeField] private GridSizeData[] m_GridLevels;
         [Header("Logic")]
         [SerializeField] private BaseGridGenerator m_GridGenerator;
-        [SerializeField] private GridVisualizer m_Visualizer;
+        [SerializeField] private BaseGridVisualizer m_Visualizer;
 
         private void Start()
         {
             if (!ValidateData())
                 return;
+
+            var data = m_GridGenerator.GenerateGrid(m_CellsData, m_GridLevels[0]);
+            for (int i = 0; i < data.CellData.GetLength(0); i++)
+                for (int j = 0; j < data.CellData.GetLength(1); j++)
+                    Debug.Log(data.CellData[i, j].Name);
         }
 
         private bool ValidateData()

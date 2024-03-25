@@ -12,4 +12,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f18b919a103634792b72b9559f9ef5, type: 3}
   m_Name: LettersData
   m_EditorClassIdentifier: 
-  cells: []
+  cells:
+  - m_Name: A
+    m_Sprite: {fileID: 4963718625464178563, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: B
+    m_Sprite: {fileID: 7783457984840754399, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: C
+    m_Sprite: {fileID: 3234300448368640894, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: D
+    m_Sprite: {fileID: 7911670913450602933, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: E
+    m_Sprite: {fileID: -6426668015567183463, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: F
+    m_Sprite: {fileID: -6426668015567183463, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: G
+    m_Sprite: {fileID: 216406037199867053, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: H
+    m_Sprite: {fileID: -8235857483100294123, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: I
+    m_Sprite: {fileID: -3541686595128163680, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: J
+    m_Sprite: {fileID: -2756605603065543306, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: K
+    m_Sprite: {fileID: -1127063002332224934, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: L
+    m_Sprite: {fileID: -5901097786099144959, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: M
+    m_Sprite: {fileID: 3295844289267200183, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: N
+    m_Sprite: {fileID: 7112752472869403061, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: O
+    m_Sprite: {fileID: 5433449995169814141, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: P
+    m_Sprite: {fileID: -4252152113809563852, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: Q
+    m_Sprite: {fileID: -4447791616812998045, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: R
+    m_Sprite: {fileID: -6342808464625005154, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: S
+    m_Sprite: {fileID: 8083504644574312765, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: T
+    m_Sprite: {fileID: -4461999128152558772, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: U
+    m_Sprite: {fileID: 3270655726746431581, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: V
+    m_Sprite: {fileID: -2983290644488427326, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: W
+    m_Sprite: {fileID: -9165466868132007793, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: X
+    m_Sprite: {fileID: 4461586319009975920, guid: 73dd729bf2415ea419248cc188d2abac, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: Y
+    m_Sprite: {fileID: -5001085640463096552, guid: efb415a36b2c90149a0a2eec625e87d7, type: 3}
+    m_CompensationAngle: 0
+  - m_Name: Z
+    m_Sprite: {fileID: 3539555106843919260, guid: efb415a36b2c90149a0a2eec625e87d7, type: 3}
+    m_CompensationAngle: 0
