@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 1967431300}
   - component: {fileID: 1967431299}
   - component: {fileID: 1967431303}
+  - component: {fileID: 1967431304}
   m_Layer: 0
   m_Name: GridHandler
   m_TagString: Untagged
@@ -729,15 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096c90c387e31c9408d7500a3d68e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CellsData: {fileID: 11400000, guid: 26a32952382f7b04aa8445d21766d6ed, type: 2}
-  m_GridLevels:
-  - {fileID: 11400000, guid: 0f5e723f25ab2e7448717d5af8e19d3b, type: 2}
-  - {fileID: 11400000, guid: fdb48488b7b192e448abae1d246e7d3b, type: 2}
-  - {fileID: 11400000, guid: 2992f913428fa4f4ebfc0dbc6bf7e7d9, type: 2}
-  m_GridGenerator: {fileID: 1967431300}
-  m_GridVisualizer: {fileID: 1967431299}
-  m_QuestionVisualizer: {fileID: 1967431303}
-  m_LevelPassDelay: 1
+  m_Iterator: {fileID: 1967431304}
 --- !u!4 &1967431302
 Transform:
   m_ObjectHideFlags: 0
@@ -767,3 +760,25 @@ MonoBehaviour:
   m_QuestionBeginning: 'Find '
   m_QuestionEnding: .
   m_QuestionTextField: {fileID: 1255784394}
+  m_AppearAnimation: {fileID: 0}
+--- !u!114 &1967431304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967431298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8398e64bca629714abdd8156102a271f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CellsData: {fileID: 11400000, guid: ae25daed8e0fb8d45a5aea56e87732e3, type: 2}
+  m_GridLevels:
+  - {fileID: 11400000, guid: 0f5e723f25ab2e7448717d5af8e19d3b, type: 2}
+  - {fileID: 11400000, guid: fdb48488b7b192e448abae1d246e7d3b, type: 2}
+  - {fileID: 11400000, guid: 2992f913428fa4f4ebfc0dbc6bf7e7d9, type: 2}
+  m_GridGenerator: {fileID: 1967431300}
+  m_GridVisualizer: {fileID: 1967431299}
+  m_QuestionVisualizer: {fileID: 1967431303}
+  m_LevelPassDelay: 1
