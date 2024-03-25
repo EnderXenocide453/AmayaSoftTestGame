@@ -206,6 +206,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1604634293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604634295}
+  - component: {fileID: 1604634294}
+  m_Layer: 0
+  m_Name: GameLifeTimeScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1604634294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604634293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e953dd84cc23d4eaebf5a4aa150335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects:
+  - {fileID: 1967431298}
+  m_GridExecutionHandler: {fileID: 1967431301}
+--- !u!4 &1604634295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604634293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.002771303, y: -0.035075676, z: -0.4664551}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1967431298
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,14 +310,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967431298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe50d13ceddba545bcb96da77bd62bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 096c90c387e31c9408d7500a3d68e871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_CellsData: {fileID: 11400000, guid: 26a32952382f7b04aa8445d21766d6ed, type: 2}
   m_GridLevels:
+  - {fileID: 11400000, guid: 0f5e723f25ab2e7448717d5af8e19d3b, type: 2}
+  - {fileID: 11400000, guid: fdb48488b7b192e448abae1d246e7d3b, type: 2}
   - {fileID: 11400000, guid: 2992f913428fa4f4ebfc0dbc6bf7e7d9, type: 2}
   m_GridGenerator: {fileID: 1967431300}
   m_Visualizer: {fileID: 1967431299}
+  m_LevelPassDelay: 1
 --- !u!4 &1967431302
 Transform:
   m_ObjectHideFlags: 0

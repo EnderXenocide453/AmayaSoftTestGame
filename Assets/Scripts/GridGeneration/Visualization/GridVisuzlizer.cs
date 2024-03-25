@@ -1,6 +1,7 @@
 using GridManagement.Data;
 using GridManagement.UI;
 using UnityEngine;
+using VContainer;
 
 namespace GridManagement.Generation
 {
@@ -11,7 +12,15 @@ namespace GridManagement.Generation
         [SerializeField] private float m_Spacing = 0.25f;
         //[SerializeField] private QuestionVisualizer
 
+        private GridExecutionHandler m_GridHandler;
+
         public Transform GridContainer => m_GridContainer == null ? transform : m_GridContainer;
+
+        [Inject]
+        public void Construct(GridExecutionHandler gridHandler)
+        {
+            m_GridHandler = gridHandler;
+        }
 
         public override void VisualizeGrid(GridGenerationData generationData)
         {
@@ -26,7 +35,7 @@ namespace GridManagement.Generation
 
             for (int x = 0;  x < cellsData.GetLength(1); x++) {
                 for (int y = 0; y < cellsData.GetLength(0); y++) {
-                    CellData data = cellsData[x, y];
+                    CellData data = cellsData[y, x];
                     DrawCell(x, y, data);
                 }
             }
@@ -40,6 +49,7 @@ namespace GridManagement.Generation
                     .GetComponent<GridCellButton>();
 
                 button.SetData(data, new Vector2Int(x, y));
+                button.SetOnClickAction(m_GridHandler.OnCellSelected);
             }
         }
 

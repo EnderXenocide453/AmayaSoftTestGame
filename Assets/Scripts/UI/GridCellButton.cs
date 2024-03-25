@@ -1,6 +1,7 @@
 using GridManagement.Data;
 using System;
 using UnityEngine;
+using VContainer;
 
 namespace GridManagement.UI
 {
@@ -19,6 +20,21 @@ namespace GridManagement.UI
             m_Index = index;
 
             m_IconRenderer.transform.Rotate(0, 0, data.CompensationAngle);
+        }
+
+        public void SetOnClickAction(Action<GridCellButton> onClick)
+        {
+            OnClick += onClick;
+        }
+
+        public void PlayApplyAnimation()
+        {
+            Debug.Log("Correct");
+        }
+
+        public void PlayDenyAnimation()
+        {
+            Debug.Log("Incorrect");
         }
 
         private void OnMouseDown()
