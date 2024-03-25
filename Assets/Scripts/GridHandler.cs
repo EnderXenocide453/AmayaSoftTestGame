@@ -19,9 +19,7 @@ namespace GridManagement
                 return;
 
             var data = m_GridGenerator.GenerateGrid(m_CellsData, m_GridLevels[0]);
-            for (int i = 0; i < data.CellData.GetLength(0); i++)
-                for (int j = 0; j < data.CellData.GetLength(1); j++)
-                    Debug.Log(data.CellData[i, j].Name);
+            m_Visualizer.VisualizeGrid(data);
         }
 
         private bool ValidateData()

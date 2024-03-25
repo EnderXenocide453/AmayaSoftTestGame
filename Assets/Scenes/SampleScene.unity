@@ -237,6 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdba5b3af072d243b81995d6d12ccbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CellPrefab: {fileID: 841196738908300333, guid: 0e8ec067f54e54045ad6d5b31e006557, type: 3}
+  m_GridContainer: {fileID: 0}
+  m_Spacing: 1.25
 --- !u!114 &1967431300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,9 +264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe50d13ceddba545bcb96da77bd62bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CellsData: {fileID: 11400000, guid: ae25daed8e0fb8d45a5aea56e87732e3, type: 2}
+  m_CellsData: {fileID: 11400000, guid: 26a32952382f7b04aa8445d21766d6ed, type: 2}
   m_GridLevels:
-  - {fileID: 11400000, guid: 0f5e723f25ab2e7448717d5af8e19d3b, type: 2}
+  - {fileID: 11400000, guid: 2992f913428fa4f4ebfc0dbc6bf7e7d9, type: 2}
   m_GridGenerator: {fileID: 1967431300}
   m_Visualizer: {fileID: 1967431299}
 --- !u!4 &1967431302
