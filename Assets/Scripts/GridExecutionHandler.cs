@@ -3,6 +3,7 @@ using GridManagement.Data;
 using GridManagement.Generation;
 using GridManagement.UI;
 using System.Collections;
+using System;
 
 namespace GridManagement
 {
@@ -20,6 +21,8 @@ namespace GridManagement
 
         private int m_CurrentLevel;
         private GridGenerationData m_GridData;
+
+        public event Action onWin;
 
         private void Start()
         {
@@ -41,9 +44,14 @@ namespace GridManagement
             cellButton.PlayDenyAnimation();
         }
 
+        public void Restart()
+        {
+            InitLevel(0);
+        }
+
         private void InitLevel(int id)
         {
-            id %= m_GridLevels.Length;
+            id = Mathf.Clamp(id, 0, m_GridLevels.Length - 1);
 
             m_GridData = m_GridGenerator.GenerateGrid(m_CellsData, m_GridLevels[id]);
             m_GridVisualizer.VisualizeGrid(m_GridData);
@@ -65,7 +73,17 @@ namespace GridManagement
 
         private void LoadNextLevel()
         {
-            InitLevel(m_CurrentLevel + 1);
+            if (++m_CurrentLevel >= m_GridLevels.Length) {
+                Win();
+                return;
+            }
+
+            InitLevel(m_CurrentLevel);
+        }
+
+        private void Win()
+        {
+            onWin?.Invoke();
         }
 
         private bool ValidateData()
