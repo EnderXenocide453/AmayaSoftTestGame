@@ -1,3 +1,4 @@
+using GridManagement.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,12 @@ namespace GridManagement.Generation
     {
         [SerializeField] private string m_QuestionBeginning, m_QuestionEnding;
         [SerializeField] private Text m_QuestionTextField;
+        [SerializeField] private ObjectAnimation m_AppearAnimation;
+
+        private void Start()
+        {
+            m_AppearAnimation?.PlayAnimation();
+        }
 
         public override void VisualizeQuestion(string question)
         {

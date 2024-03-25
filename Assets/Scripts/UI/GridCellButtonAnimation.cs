@@ -5,7 +5,7 @@ namespace GridManagement.UI
 {
     public class GridCellButtonAnimation : MonoBehaviour
     {
-        [SerializeField] private ObjectAnimation m_IconApplyAnimation;
+        [SerializeField] private ObjectAnimation[] m_IconApplyAnimations;
         [SerializeField] private ObjectAnimation m_IconDenyAnimation;
         [SerializeField] private ObjectAnimation m_SelfAppearAnimation;
 
@@ -16,7 +16,8 @@ namespace GridManagement.UI
 
         public void PlayApplyAnimation()
         {
-            m_IconApplyAnimation?.PlayAnimation();
+            foreach (var animation in m_IconApplyAnimations)
+                animation?.PlayAnimation();
         }
 
         public void PlayDenyAnimation()
@@ -26,7 +27,8 @@ namespace GridManagement.UI
 
         private void OnDestroy()
         {
-            m_IconApplyAnimation?.StopAnimation();
+            foreach(var animation in m_IconApplyAnimations)
+                animation?.StopAnimation();
             m_IconDenyAnimation?.StopAnimation();
             m_SelfAppearAnimation?.StopAnimation();
         }

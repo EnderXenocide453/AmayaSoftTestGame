@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2262975413415137022}
   - component: {fileID: 5397557271083742478}
   - component: {fileID: 7134400793371838848}
+  - component: {fileID: 8493805878873095613}
   m_Layer: 0
   m_Name: GridCell
   m_TagString: Untagged
@@ -154,9 +155,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c93f270985817749bce0d4b5fed5a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IconApplyAnimation: {fileID: 87684381309106899}
+  m_IconApplyAnimations:
+  - {fileID: 8493805878873095613}
+  - {fileID: 87684381309106899}
   m_IconDenyAnimation: {fileID: 1883171401188988667}
   m_SelfAppearAnimation: {fileID: 5397557271083742478}
+--- !u!114 &8493805878873095613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841196738908300333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737e5787d3702fe46becc044e8cb8505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Duration: 1
+  m_ParticlePrefab: {fileID: 4373335596679556084, guid: d131da10684b7974cba88675f422a375, type: 3}
+  m_ParticleCount: 3
+  m_ParticleSpread: 0.5
 --- !u!1 &3185306978537448819
 GameObject:
   m_ObjectHideFlags: 0

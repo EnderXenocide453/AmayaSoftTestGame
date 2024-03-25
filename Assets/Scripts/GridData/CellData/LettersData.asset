@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Sprite: {fileID: 7911670913450602933, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
     m_CompensationAngle: 0
   - m_Name: E
-    m_Sprite: {fileID: -6426668015567183463, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
+    m_Sprite: {fileID: 4652326554734856401, guid: 5b95573c90b6da04e979b29b78284385, type: 3}
     m_CompensationAngle: 0
   - m_Name: F
     m_Sprite: {fileID: -6426668015567183463, guid: 5b95573c90b6da04e979b29b78284385, type: 3}

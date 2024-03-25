@@ -7,7 +7,7 @@ namespace GridManagement.Animations
     {
         [SerializeField] float m_InitScale = 1f, m_MaxScale = 1.25f, m_MinScale = 1f;
 
-        public override Sequence PlayAnimation()
+        public override void PlayAnimation()
         {
             float delay = m_Duration / 2f;
 
@@ -17,8 +17,6 @@ namespace GridManagement.Animations
                 .Append(transform.DOScale(m_MaxScale, m_Duration))
                 .Append(transform.DOScale(m_MinScale, m_Duration))
                 .Play();
-
-            return m_Sequence;
         }
 
         public override void StopAnimation()

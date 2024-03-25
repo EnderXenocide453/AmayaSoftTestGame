@@ -9,6 +9,7 @@ namespace GridManagement
     {
         [Header("Logic")]
         [SerializeField] private LevelsIterator m_Iterator;
+        [SerializeField] private UIElementsHandler m_ElementsHandler;
 
         private bool m_ISFirstInit = true;
         private bool m_IsButtonsActive = true;
@@ -44,12 +45,16 @@ namespace GridManagement
         public void Restart()
         {
             m_Iterator.InitLevel(0);
+
             m_IsButtonsActive = true;
+            m_ElementsHandler.HideWinPanel();
         }
 
         private void Win()
         {
             m_IsButtonsActive = false;
+            m_ElementsHandler?.ShowWinPanel();
+
             onWin?.Invoke();
         }
     }

@@ -215,6 +215,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1255784393}
+  - {fileID: 340550537}
   - {fileID: 101737060}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -256,7 +257,7 @@ RectTransform:
   m_Children:
   - {fileID: 475057791}
   m_Father: {fileID: 76361993}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -312,6 +313,128 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101737059}
+  m_CullTransparentMesh: 1
+--- !u!1 &340550536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340550537}
+  - component: {fileID: 340550542}
+  - component: {fileID: 340550541}
+  - component: {fileID: 340550540}
+  - component: {fileID: 340550539}
+  - component: {fileID: 340550538}
+  m_Layer: 5
+  m_Name: WinFadePanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &340550537
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 76361993}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &340550538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cac3bef3dc8ac24facf72415c92c7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AppearAnimation: {fileID: 340550540}
+  m_DisappearAnimation: {fileID: 340550539}
+--- !u!114 &340550539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19981bd7de7d8c14ea70e484004c5204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Duration: 1
+  m_Graphic: {fileID: 340550541}
+  m_FadeValue: 0
+--- !u!114 &340550540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19981bd7de7d8c14ea70e484004c5204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Duration: 1
+  m_Graphic: {fileID: 340550541}
+  m_FadeValue: 0.8
+--- !u!114 &340550541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &340550542
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340550536}
   m_CullTransparentMesh: 1
 --- !u!1 &475057790
 GameObject:
@@ -552,6 +675,7 @@ GameObject:
   - component: {fileID: 1255784393}
   - component: {fileID: 1255784395}
   - component: {fileID: 1255784394}
+  - component: {fileID: 1255784396}
   m_Layer: 5
   m_Name: QuestionText
   m_TagString: Untagged
@@ -591,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -620,6 +744,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255784392}
   m_CullTransparentMesh: 1
+--- !u!114 &1255784396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255784392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19981bd7de7d8c14ea70e484004c5204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Duration: 3
+  m_Graphic: {fileID: 1255784394}
+  m_FadeValue: 1
 --- !u!1 &1604634293
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +823,7 @@ GameObject:
   - component: {fileID: 1967431299}
   - component: {fileID: 1967431303}
   - component: {fileID: 1967431304}
+  - component: {fileID: 1967431305}
   m_Layer: 0
   m_Name: GridHandler
   m_TagString: Untagged
@@ -731,6 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Iterator: {fileID: 1967431304}
+  m_ElementsHandler: {fileID: 1967431305}
 --- !u!4 &1967431302
 Transform:
   m_ObjectHideFlags: 0
@@ -760,7 +901,7 @@ MonoBehaviour:
   m_QuestionBeginning: 'Find '
   m_QuestionEnding: .
   m_QuestionTextField: {fileID: 1255784394}
-  m_AppearAnimation: {fileID: 0}
+  m_AppearAnimation: {fileID: 1255784396}
 --- !u!114 &1967431304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,3 +923,16 @@ MonoBehaviour:
   m_GridVisualizer: {fileID: 1967431299}
   m_QuestionVisualizer: {fileID: 1967431303}
   m_LevelPassDelay: 1
+--- !u!114 &1967431305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967431298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8705bb9b4684f6e49afb4261c6413d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_WinPanel: {fileID: 340550538}
