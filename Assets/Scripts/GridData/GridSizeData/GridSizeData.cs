@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GridManagement
+namespace GridManagement.Data
 {
     [CreateAssetMenu(fileName = "GridSizeData", menuName = "Grid/SizeData")]
     public class GridSizeData : ScriptableObject
