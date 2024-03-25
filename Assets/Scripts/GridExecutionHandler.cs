@@ -4,6 +4,7 @@ using GridManagement.Generation;
 using GridManagement.UI;
 using System.Collections;
 using System;
+using UnityEngineInternal;
 
 namespace GridManagement
 {
@@ -20,7 +21,10 @@ namespace GridManagement
         [SerializeField] private float m_LevelPassDelay = 1f;
 
         private int m_CurrentLevel;
+        private bool m_FirstInit = true;
         private GridGenerationData m_GridData;
+
+        public bool IsFirstInit => m_FirstInit;
 
         public event Action onWin;
 
@@ -35,13 +39,13 @@ namespace GridManagement
         public void OnCellSelected(GridCellButton cellButton)
         {
             if (cellButton.Index == m_GridData.CorrectIndex) {
-                cellButton.PlayApplyAnimation();
+                cellButton.Animation.PlayApplyAnimation();
                 PassLevel();
 
                 return;
             }
 
-            cellButton.PlayDenyAnimation();
+            cellButton.Animation.PlayDenyAnimation();
         }
 
         public void Restart()
@@ -58,6 +62,7 @@ namespace GridManagement
             m_QuestionVisualizer.VisualizeQuestion(m_GridData.CorrectCell.Name);
 
             m_CurrentLevel = id;
+            m_FirstInit = false;
         }
 
         private void InitLevel(int id, GridCellsData gridCellsData)

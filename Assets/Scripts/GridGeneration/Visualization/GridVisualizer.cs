@@ -53,6 +53,9 @@ namespace GridManagement.Generation
 
                 button.SetData(data, new Vector2Int(x, y));
                 button.SetOnClickAction(m_GridHandler.OnCellSelected);
+
+                if (m_GridHandler.IsFirstInit)
+                    button.Animation.Appear();
             }
         }
 

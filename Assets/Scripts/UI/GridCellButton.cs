@@ -1,16 +1,20 @@
+using GridManagement.Animations;
 using GridManagement.Data;
 using System;
 using UnityEngine;
-using VContainer;
 
 namespace GridManagement.UI
 {
+    [RequireComponent(typeof(GridCellButtonAnimation))]
     public class GridCellButton : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer m_IconRenderer;
+        
         private Vector2Int m_Index;
+        private GridCellButtonAnimation m_Animation;
 
         public Vector2Int Index => m_Index;
+        public GridCellButtonAnimation Animation => m_Animation ??= GetComponent<GridCellButtonAnimation>();
 
         public event Action<GridCellButton> OnClick;
 
@@ -25,16 +29,6 @@ namespace GridManagement.UI
         public void SetOnClickAction(Action<GridCellButton> onClick)
         {
             OnClick += onClick;
-        }
-
-        public void PlayApplyAnimation()
-        {
-            Debug.Log("Correct");
-        }
-
-        public void PlayDenyAnimation()
-        {
-            Debug.Log("Incorrect");
         }
 
         private void OnMouseDown()
