@@ -5,12 +5,11 @@ using VContainer;
 
 namespace GridManagement.Generation
 {
-    public class GridVisuzlizer : BaseGridVisualizer
+    public class GridVisualizer : BaseGridVisualizer
     {
         [SerializeField] private GameObject m_CellPrefab;
         [SerializeField] private Transform m_GridContainer;
         [SerializeField] private float m_Spacing = 0.25f;
-        //[SerializeField] private QuestionVisualizer
 
         private GridExecutionHandler m_GridHandler;
 
@@ -28,12 +27,16 @@ namespace GridManagement.Generation
                 return;
 
             Clear();
+            GenerateCells(generationData);
+        }
 
+        private void GenerateCells(GridGenerationData generationData)
+        {
             var cellsData = generationData.CellData;
             float offsetX = ((float)cellsData.GetLength(1) * m_Spacing - m_Spacing) / 2f;
             float offsetY = ((float)cellsData.GetLength(0) * m_Spacing - m_Spacing) / 2f;
 
-            for (int x = 0;  x < cellsData.GetLength(1); x++) {
+            for (int x = 0; x < cellsData.GetLength(1); x++) {
                 for (int y = 0; y < cellsData.GetLength(0); y++) {
                     CellData data = cellsData[y, x];
                     DrawCell(x, y, data);

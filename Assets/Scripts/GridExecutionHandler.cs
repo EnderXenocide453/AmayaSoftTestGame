@@ -13,12 +13,13 @@ namespace GridManagement
         [SerializeField] private GridSizeData[] m_GridLevels;
         [Header("Logic")]
         [SerializeField] private BaseGridGenerator m_GridGenerator;
-        [SerializeField] private BaseGridVisualizer m_Visualizer;
+        [SerializeField] private BaseGridVisualizer m_GridVisualizer;
+        [SerializeField] private BaseQuestionVisualizer m_QuestionVisualizer;
         [Header("Misc.")]
         [SerializeField] private float m_LevelPassDelay = 1f;
 
         private int m_CurrentLevel;
-        private GridGenerationData m_gridData;
+        private GridGenerationData m_GridData;
 
         private void Start()
         {
@@ -30,7 +31,7 @@ namespace GridManagement
 
         public void OnCellSelected(GridCellButton cellButton)
         {
-            if (cellButton.Index == m_gridData.CorrectIndex) {
+            if (cellButton.Index == m_GridData.CorrectIndex) {
                 cellButton.PlayApplyAnimation();
                 PassLevel();
 
@@ -44,10 +45,17 @@ namespace GridManagement
         {
             id %= m_GridLevels.Length;
 
-            m_gridData = m_GridGenerator.GenerateGrid(m_CellsData, m_GridLevels[id]);
-            m_Visualizer.VisualizeGrid(m_gridData);
+            m_GridData = m_GridGenerator.GenerateGrid(m_CellsData, m_GridLevels[id]);
+            m_GridVisualizer.VisualizeGrid(m_GridData);
+            m_QuestionVisualizer.VisualizeQuestion(m_GridData.CorrectCell.Name);
 
             m_CurrentLevel = id;
+        }
+
+        private void InitLevel(int id, GridCellsData gridCellsData)
+        {
+            m_CellsData = gridCellsData;
+            InitLevel(id);
         }
 
         private void PassLevel()
@@ -73,8 +81,11 @@ namespace GridManagement
             } if (m_GridGenerator == null) {
                 Debug.LogError("Не назначен генератор сетки!");
                 isValid = false;
-            } if (m_Visualizer == null) {
+            } if (m_GridVisualizer == null) {
                 Debug.LogError("Не назначен визуализатор сетки!");
+                isValid = false;
+            } if (m_QuestionVisualizer == null) {
+                Debug.LogError("Не назначен визуализатор вопроса!");
                 isValid = false;
             }
 

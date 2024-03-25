@@ -10,6 +10,7 @@ namespace GridManagement.Generation
 
         public CellData[,] CellData => m_GridData;
         public Vector2Int CorrectIndex => m_CorrectIndex;
+        public CellData CorrectCell => m_GridData[CorrectIndex.y, CorrectIndex.x];
 
         public GridGenerationData(Vector2Int size)
         {
